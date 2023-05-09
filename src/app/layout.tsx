@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
+import Header from "./header";
+import Footer from "./footer";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -16,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sans.className}>
-        <div>header</div>
+        <Header />
         {children}
-        <div>footer</div>
+        <Footer />
       </body>
     </html>
   );
