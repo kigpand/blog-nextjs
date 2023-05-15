@@ -1,12 +1,12 @@
-import { getAllPosts } from "@/service/post";
+import { getFeaturedPosts } from "@/service/post";
 import PostGrid from "./PostGrid";
 
 export default async function Post() {
-  const post = await getAllPosts();
+  const post = await getFeaturedPosts();
   return (
-    <div style={{ width: "70% " }}>
-      <div className="font-bold">Featured Posts</div>
+    <section>
+      <h2 className="text-2xl font-bold my-2">Featured Posts</h2>
       <PostGrid post={post} />
-    </div>
+    </section>
   );
 }
